@@ -34,7 +34,7 @@ body {
     font-size: 1.5em;
     border-radius: 5px;
     margin: 0 20px;
-    width: 150px;
+    /*width: 150px;*/
     text-align: center;
 }
 
@@ -61,4 +61,9 @@ body {
 
 .form-container button {
     margin-top: 40px;
+}
+
+.confirmRegistration {
+    padding: 15px 52px;
+
 }
