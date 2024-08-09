@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GamerBuddy - Sign Up</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+</head>
+<body>
+<div class="container">
+    <h1>GamerBuddy</h1>
+    <form class="form-container" action="#" method="post">
+        <div><p>username</p><input type="text" name="username" placeholder="Username" required /></div>
+        <div><p>Full Name</p><input type="text" name="fullname" placeholder="Full Name" required /></div>
+        <div><p>email</p><input type="email" name="email" placeholder="Email" required /></div>
+        <div><p>password</p><input type="password" name="password" placeholder="Password" required /></div>
+        <button type="submit" class="btn">Confirm Registration</button>
+    </form>
+    <a th:href="@{/}" class="btn">Back</a>
+</div>
+</body>
+</html>
