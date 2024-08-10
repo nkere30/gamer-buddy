@@ -19,7 +19,7 @@ body {
 
 .logo {
     color: #33FF00;
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 0px 0px 5px #ff00ff, 0px 0px 10px #ff00ff;
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -43,19 +43,12 @@ body {
 }
 
 .btn-reg {
-    background-color: #0000FF;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin: 0 20px;
     width: 200px;
-    text-align: center;
 }
 
 .btn:hover {
     background-color: #1c7ed6;
+    cursor: pointer;
 }
 
 .or-text {
@@ -70,28 +63,33 @@ body {
 }
 
 .input-group {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the input fields and labels together */
     width: 100%;
+    margin-bottom: 1.5em; /* Increased spacing between input groups using em units */
 }
 
 label {
-    display: block;
+    align-self: flex-start; /* Aligns the label to the left */
     font-size: 1.2em;
-    margin-bottom: 5px;
-    text-align: left;
+    margin-bottom: 0.5em; /* Space between the label and input field using em units */
     color: #ffffff;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Make the input fields take the full width of the input group */
+    max-width: 280px; /* Set a maximum width for the input fields */
+    padding: 0.75em; /* Use em units for padding to scale with font size */
     font-size: 1em;
     border: none;
     border-radius: 5px;
     background-color: #555;
     color: white;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    margin-bottom: 1em; /* Add space between input fields and the next label using em units */
 }
 
 input[type="text"]::placeholder,
