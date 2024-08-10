@@ -13,10 +13,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/", "/signup", "/login", "/styles.css").permitAll()  // Allow public access to these paths
-                .anyRequest().authenticated()
+                .anyRequest().authenticated()  // Require authentication for any other request
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/login")  // Set your custom login page
                 .permitAll()
                 .and()
                 .logout()
