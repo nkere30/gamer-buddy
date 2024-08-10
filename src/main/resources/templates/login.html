@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>GamerBuddy - Log In</title>
     <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
 </head>
 <body>
 <div class="container">
-    <h1>GamerBuddy</h1>
-    <form action="#" method="post">
-        <input type="text" name="username" placeholder="Username / Email" required />
-        <input type="password" name="password" placeholder="Password" required />
+    <h1 class="logo">GamerBuddy</h1>
+    <form action="#" method="post" class="login-form">
+        <div class="input-group">
+            <label for="username">Username / Email</label>
+            <input type="text" id="username" name="username" placeholder="Input here..." required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Input here..." required>
+        </div>
         <button type="submit" class="btn">Log In</button>
     </form>
-    <a th:href="@{/}" class="btn">Back</a>
 </div>
 </body>
 </html>
+

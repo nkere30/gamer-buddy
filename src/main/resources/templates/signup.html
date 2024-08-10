@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>GamerBuddy - Sign Up</title>
     <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
 </head>
 <body>
 <div class="container">
-    <h1>GamerBuddy</h1>
-    <form class="form-container" action="#" method="post">
-        <div><p>username</p><input type="text" name="username" placeholder="Username" required /></div>
-        <div><p>Full Name</p><input type="text" name="fullname" placeholder="Full Name" required /></div>
-        <div><p>email</p><input type="email" name="email" placeholder="Email" required /></div>
-        <div><p>password</p><input type="password" name="password" placeholder="Password" required /></div>
-        <button type="submit" class="confirmRegistration btn">Confirm Registration</button>
+    <h1 class="logo">GamerBuddy</h1>
+    <form action="#" method="post" class="signup-form">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Input here..." required>
+        </div>
+        <div class="input-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Input here..." required>
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Input here..." required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Input here..." required>
+        </div>
+        <button type="submit" class="btn-reg">Confirm Registration</button>
     </form>
-<!--    <a th:href="@{/}" class="btn">Back</a>-->
 </div>
 </body>
 </html>
+
+
