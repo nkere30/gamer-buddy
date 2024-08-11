@@ -24,16 +24,21 @@ public class MatchController {
     @GetMapping("/findBuddy")
     public String findBuddyPage(Model model) {
         User currentUser = userService.getCurrentUser();
+        if (currentUser == null) {
+            return "redirect:/login";
+        }
+
         Optional<User> randomUserOpt = matchService.getRandomUserForMatching(currentUser);
 
         if (randomUserOpt.isPresent()) {
             model.addAttribute("matchedUser", randomUserOpt.get());
-            return "findBuddy";
+            return "findBuddy";  // Ensure this matches the actual HTML template name
         } else {
             model.addAttribute("message", "No available users for matching.");
-            return "noMatches";
+            return "noMatches";  // Handle case where no match is found
         }
     }
+
 
     @PostMapping("/findBuddy/match")
     public String matchUser(@RequestParam Long userId) {
