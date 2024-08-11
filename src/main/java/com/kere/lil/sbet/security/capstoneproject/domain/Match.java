@@ -9,6 +9,11 @@ import javax.persistence.*;
 @Setter
 @Table(name = "matches")
 public class Match {
+
+    public Match(Long user1Id, Long user2Id) {
+        this.user1Id = user1Id;
+        this.user2Id = user2Id;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
