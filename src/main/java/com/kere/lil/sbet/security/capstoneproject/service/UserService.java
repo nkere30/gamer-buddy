@@ -5,6 +5,8 @@ import com.kere.lil.sbet.security.capstoneproject.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -73,5 +75,17 @@ public class UserService {
         }
 
         return errors.toString();
+    }
+
+    public User getCurrentUser() {
+        // Get the username of the currently authenticated user from the security context
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+    }
+
+    public Optional<User> findById(Long id) {
+        // Find a user by their ID
+        return userRepository.findById(id);
     }
 }
