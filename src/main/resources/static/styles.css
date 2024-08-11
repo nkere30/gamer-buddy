@@ -147,7 +147,9 @@ input[type="password"]:focus {
 .profile-actions .btn {
     width: 150px;
 }
-
+.findBuddyBtn {
+    background-color: #013220;
+}
 .profile-actions .btn-reg {
     width: 200px;
     background-color: #FF4500; /* Different color for Log Out button */
