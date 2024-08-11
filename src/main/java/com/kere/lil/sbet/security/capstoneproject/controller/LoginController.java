@@ -38,7 +38,7 @@ public class LoginController {
             return "redirect:/profile?username=" + userOpt.get().getUsername();
         } else {
             logger.warn("Login failed for username/email: {}", user.getUsername());
-            model.addAttribute("error", "Invalid username/email or password");
+            model.addAttribute("error", "Invalid username/email and/or password");
             return "login";
         }
     }
