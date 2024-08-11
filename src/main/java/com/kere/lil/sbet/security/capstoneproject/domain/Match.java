@@ -23,4 +23,8 @@ public class Match {
 
     @Column(nullable = false)
     private Long user2Id;
+
+    public Match() {
+
+    }
 }

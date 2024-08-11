@@ -28,7 +28,7 @@ public class MatchController {
 
         if (randomUserOpt.isPresent()) {
             model.addAttribute("matchedUser", randomUserOpt.get());
-            return "findBuddy";  // Return the correct view name
+            return "findBuddy";
         } else {
             model.addAttribute("message", "No available users for matching.");
             return "noMatches";
