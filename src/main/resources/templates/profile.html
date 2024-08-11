@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>GamerBuddy - Profile</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+</head>
+<body>
+<div class="container">
+  <h1 class="logo">GamerBuddy</h1>
+
+  <div class="profile-header">
+    <h2>Welcome, <span th:text="${user.username}">Username</span></h2>
+  </div>
+
+  <div class="profile-details">
+    <p><strong>Full Name:</strong> <span th:text="${user.fullName}">Full Name</span></p>
+    <p><strong>Email:</strong> <span th:text="${user.email}">Email</span></p>
+  </div>
+
+  <div class="profile-actions">
+    <a href="/editProfile" class="btn">Edit Profile</a>
+    <a href="/logout" class="btn btn-reg">Log Out</a>
+  </div>
+</div>
+</body>
+</html>
