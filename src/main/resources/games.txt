@@ -1,0 +1,122 @@
+Age of Empires II,A classic real-time strategy game set in the Middle Ages.
+Alien: Isolation,A first-person survival horror game set in the Alien universe.
+Among Us,A social deduction game where players must identify impostors.
+Animal Crossing: New Horizons,A life simulation game where players manage a village of animals.
+Anno 1800,A city-building game set in the Industrial Revolution.
+Apex Legends,A battle royale game with hero-based gameplay.
+Assassin's Creed Odyssey,An open-world action RPG set in ancient Greece.
+Axiom Verge,A metroidvania game inspired by classic 8-bit games.
+Banished,A city-building game focused on managing a small community.
+Battlefield V,A first-person shooter set in World War II.
+BioShock Infinite,A first-person shooter with a strong narrative focus.
+Blasphemous,A metroidvania game with dark religious themes.
+Bloodborne,A gothic horror action RPG known for its challenging gameplay.
+Borderlands 3,A looter shooter with a focus on humor and cooperative gameplay.
+Call of Duty: Modern Warfare,First-person shooter game with a gripping campaign.
+Castlevania: Symphony of the Night,A classic metroidvania game.
+Celeste,A platformer game with a focus on difficult, precise movement.
+Cities: Skylines,A city-building game with a focus on realistic urban planning.
+Control,A third-person action game with a focus on supernatural abilities.
+Crash Bandicoot 4,A platformer game with challenging levels.
+Crusader Kings III,A grand strategy game with a focus on medieval dynasties.
+Cuphead,A run-and-gun platformer with a unique hand-drawn art style.
+Cyberpunk 2077,An open-world RPG set in a dystopian future.
+Dark Souls III,A challenging action RPG with dark fantasy elements.
+Dead Cells,A roguelike metroidvania game with a focus on fast-paced combat.
+Dead Rising 3,An action-adventure game set in a zombie-infested world.
+Destiny 2,A first-person shooter with MMO elements.
+Detroit: Become Human,A narrative-driven game exploring artificial intelligence and human emotions.
+Diablo III,An action RPG with a focus on loot and character customization.
+Dishonored 2,A first-person stealth action game with supernatural abilities.
+Donkey Kong Country,A classic platformer game with challenging levels.
+Doom Eternal,A fast-paced first-person shooter with a focus on combat.
+Dota 2,A popular MOBA game with complex mechanics.
+Dragon Quest XI,A traditional Japanese RPG with turn-based combat.
+Dying Light,A first-person action game set in a zombie apocalypse.
+Europa Universalis IV,A grand strategy game set in the early modern period.
+Fall Guys,A multiplayer party game with obstacle course challenges.
+Fallout 4,An open-world RPG set in a post-apocalyptic wasteland.
+Far Cry 5,An open-world first-person shooter set in rural America.
+FIFA 21,A soccer simulation game with realistic gameplay.
+Final Fantasy VII Remake,An action RPG remake of the classic Final Fantasy VII.
+Fire Emblem: Three Houses,A tactical RPG with a focus on character relationships.
+Fortnite,A battle royale game with building mechanics.
+Frostpunk,A city-building survival game set in a frozen world.
+Gears 5,A third-person shooter with a focus on cover-based combat.
+Ghost of Tsushima,An open-world action-adventure game set in feudal Japan.
+God of War,A story-driven action-adventure game set in Norse mythology.
+Grand Theft Auto V,An open-world action-adventure game.
+Half-Life 2,A classic first-person shooter with a deep story.
+Hades,A roguelike dungeon crawler set in Greek mythology.
+Halo: The Master Chief Collection,A compilation of first-person shooters in the Halo series.
+Harvest Moon,A farming simulation game where players manage a farm.
+Hearts of Iron IV,A grand strategy game set during World War II.
+Hollow Knight,A metroidvania game with challenging combat and exploration.
+Horizon Zero Dawn,An open-world action RPG set in a post-apocalyptic world.
+Hyper Light Drifter,A top-down action game with a focus on exploration and combat.
+Iconoclasts,A metroidvania game with a focus on story and puzzles.
+Into the Breach,A turn-based strategy game with a focus on tactical combat.
+Katana Zero,A platformer game with fast-paced combat and a unique narrative.
+La-Mulana 2,A challenging metroidvania game with complex puzzles.
+Layers of Fear,A first-person psychological horror game.
+League of Legends,A multiplayer online battle arena (MOBA) game.
+Left 4 Dead,A cooperative first-person shooter with a focus on surviving against zombies.
+Life is Strange,A narrative-driven adventure game with time manipulation mechanics.
+Mass Effect 2,A sci-fi RPG with a focus on narrative and character development.
+Mega Man 11,A platformer game with challenging levels and bosses.
+Metal Gear Solid V,A stealth action game with an open-world design.
+Minecraft,A sandbox game where players can build and explore their worlds.
+Mortal Kombat 11,A fighting game with brutal combat mechanics.
+Nier: Automata,An action RPG set in a dystopian future with philosophical themes.
+Nioh,A challenging action RPG set in feudal Japan.
+Overcooked 2,A cooperative cooking game where players must manage chaotic kitchens.
+Overwatch,A team-based multiplayer shooter.
+Persona 5,A Japanese RPG with a focus on social simulation.
+Planet Coaster,A theme park simulation game.
+Planet Zoo,A zoo management simulation game.
+Portal 2,A puzzle-platformer with a focus on physics-based challenges.
+Prey,A first-person action-adventure game with survival horror elements.
+Project Zomboid,A zombie survival game with deep simulation mechanics.
+PUBG,A battle royale game that popularized the genre.
+Rayman Legends,A platformer game with colorful visuals and fluid gameplay.
+Red Dead Redemption 2,An open-world game set in the Wild West.
+Resident Evil 2,A remake of the classic survival horror game.
+Rocket League,A sports game that combines soccer with rocket-powered cars.
+Sekiro: Shadows Die Twice,A challenging action game with stealth elements.
+Shovel Knight,A platformer inspired by classic 8-bit games.
+Silent Hill 2,A classic survival horror game with a deep narrative.
+SimCity,A classic city-building simulation game.
+SOMA,A first-person survival horror game with a focus on story.
+Sonic Mania,A platformer game inspired by classic Sonic games.
+Spider-Man,An open-world action game where you play as the Marvel superhero.
+Splatoon 2,A team-based shooter with a focus on covering territory with ink.
+Starcraft II,A real-time strategy game with a focus on competitive multiplayer.
+Stardew Valley,A farming simulation game with RPG elements.
+Street Fighter V,A competitive fighting game with a focus on combos.
+Super Mario Odyssey,A platform game where Mario explores various worlds.
+Super Mario Party,A party game with various mini-games.
+Super Meat Boy,A challenging platformer game with fast-paced levels.
+Super Smash Bros. Ultimate,A crossover fighting game featuring characters from various franchises.
+Superliminal,A first-person puzzle game with perspective-based puzzles.
+The Binding of Isaac,A roguelike game with procedurally generated levels and permadeath.
+The Division 2,A third-person shooter set in a post-apocalyptic Washington D.C.
+The Elder Scrolls V: Skyrim,An open-world RPG set in a high-fantasy world.
+The Evil Within,A survival horror game with psychological elements.
+The Last of Us Part II,A post-apocalyptic action-adventure game with a focus on narrative.
+The Legend of Zelda,Breath of the Wild is an action-adventure game.
+The Messenger,A platformer game with a unique time-traveling mechanic.
+The Outer Worlds,An RPG set in a retro-futuristic universe.
+The Room,A series of puzzle games with a focus on physical interaction.
+The Sims 4,A life simulation game where players control virtual people.
+The Talos Principle,A first-person puzzle game with philosophical themes.
+They Are Billions,A real-time strategy game with a focus on survival against hordes of zombies.
+This War of Mine,A survival game set during a modern war.
+Tomb Raider,A reboot of the classic action-adventure series.
+Tony Hawk's Pro Skater 1 + 2,A remaster of the classic skateboarding games.
+Total War: Shogun 2,A grand strategy game set in feudal Japan.
+Undertale,A unique RPG with a focus on player choice and consequences.
+Valorant,A tactical first-person shooter with hero-based gameplay.
+Victoria II,A grand strategy game set during the 19th century.
+Warcraft III,A real-time strategy game set in the fantasy world of Azeroth.
+World of Warcraft,An MMORPG set in the fantasy world of Azeroth.
+Xenoblade Chronicles 2,An open-world RPG with a complex story.
