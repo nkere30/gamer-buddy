@@ -24,7 +24,7 @@ public class MatchController {
     @GetMapping("/findBuddy")
     public String findBuddyPage(Model model) {
         User currentUser = userService.getCurrentUser();
-        if (currentUser == null) {
+        if (currentUser == null || "anonymousUser".equals(currentUser.getUsername())) {
             return "redirect:/login";
         }
 
@@ -38,6 +38,7 @@ public class MatchController {
             return "noMatches";  // Handle case where no match is found
         }
     }
+
 
 
     @PostMapping("/findBuddy/match")

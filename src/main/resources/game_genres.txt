@@ -1,0 +1,20 @@
+Action
+Adventure
+Battle Royale
+Educational
+Fighting
+Horror
+MMO (Massively Multiplayer Online)
+Music/Rhythm
+Party Games
+Platformer
+Puzzle
+Role-Playing Game (RPG)
+Roguelike
+Sandbox
+Shooter
+Simulation
+Sports
+Stealth
+Strategy
+Survival
