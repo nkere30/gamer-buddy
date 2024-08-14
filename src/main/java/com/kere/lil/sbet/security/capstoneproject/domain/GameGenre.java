@@ -3,6 +3,8 @@ package com.kere.lil.sbet.security.capstoneproject.domain;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -15,4 +17,8 @@ public class GameGenre {
 
     @Column(nullable = false, unique = true)
     private String name;
+
+    // Bi-directional relationship
+    @ManyToMany(mappedBy = "genres")
+    private Set<Game> games = new HashSet<>();
 }

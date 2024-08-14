@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.util.Optional;
 
 @Configuration
-public class DataLoader implements CommandLineRunner {
+public class GameGenreLoader implements CommandLineRunner {
 
     @Autowired
     private GameGenreRepository gameGenreRepository;
