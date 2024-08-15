@@ -158,3 +158,12 @@ input[type="password"]:focus {
 .profile-actions .btn-reg:hover {
     background-color: #FF6347; /* Hover color for Log Out button */
 }
+.decline-btn{
+    background-color: crimson;
+}
+.match-btn{
+    background-color: darkgreen;
+}
+.decline-btn:hover{
+    background-color: darkmagenta;
+}
