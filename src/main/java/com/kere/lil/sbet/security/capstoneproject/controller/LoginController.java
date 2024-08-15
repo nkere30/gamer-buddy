@@ -3,6 +3,7 @@ package com.kere.lil.sbet.security.capstoneproject.controller;
 import com.kere.lil.sbet.security.capstoneproject.domain.User;
 import com.kere.lil.sbet.security.capstoneproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
+    private AuthenticationManager authenticationManager;
 
     @GetMapping("/login")
     public String loginForm(Model model) {
