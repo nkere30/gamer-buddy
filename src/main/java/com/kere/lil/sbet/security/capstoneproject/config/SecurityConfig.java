@@ -4,15 +4,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig {
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/login", "/", "/signup", "/profile", "/findBuddy", "/styles.css")
                 .permitAll()
@@ -23,34 +26,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/index")
                 .permitAll();
-//        http
-//                .authorizeRequests()
-//                .antMatchers("/", "/signup", "/login", "/styles.css").permitAll()
-//                .antMatchers("/findBuddy", "/profile").authenticated()
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin((form) -> {
-//                    try {
-//                        form.loginPage("/login").permitAll()
-//                                .loginPage("/login")
-//                                .loginProcessingUrl("/login")
-//                                .defaultSuccessUrl("/profile", true)
-//                                .failureUrl("/login?error=true")
-//                                .permitAll()
-//                                .and()
-//                                .logout()
-//                                .logoutSuccessUrl("/login?logout=true")
-//                                .permitAll()
-//                                .and()
-//                                .csrf().disable();
-//                    } catch (Exception e) {
-//                        throw new RuntimeException(e);
-//                    }
-//                });
+
+        return http.build();
     }
 
     @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
+    public UserDetailsService userDetailsService() {
+        return new InMemoryUserDetailsManager(
+                User.withUsername("user")
+                        .password(bCryptPasswordEncoder().encode("password"))
+                        .roles("USER")
+                        .build()
+        );
+    }
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
 }
+
+

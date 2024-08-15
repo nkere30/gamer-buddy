@@ -1,0 +1,122 @@
+Age of Empires II,Strategy
+Alien: Isolation,Horror
+Among Us,Party Games
+Animal Crossing: New Horizons,Simulation
+Anno 1800,Strategy
+Apex Legends,Battle Royale
+Assassin's Creed Odyssey,Role-Playing Game (RPG)
+Axiom Verge,Platformer
+Banished,Simulation
+Battlefield V,Shooter
+BioShock Infinite,Shooter
+Blasphemous,Platformer
+Bloodborne,Action
+Borderlands 3,Shooter
+Call of Duty: Modern Warfare,Shooter
+Castlevania: Symphony of the Night,Platformer
+Celeste,Platformer
+Cities: Skylines,Simulation
+Control,Action
+Crash Bandicoot 4,Platformer
+Crusader Kings III,Strategy
+Cuphead,Platformer
+Cyberpunk 2077,Role-Playing Game (RPG)
+Dark Souls III,Action
+Dead Cells,Platformer
+Dead Rising 3,Action
+Destiny 2,Shooter
+Detroit: Become Human,Adventure
+Diablo III,Role-Playing Game (RPG)
+Dishonored 2,Stealth
+Donkey Kong Country,Platformer
+Doom Eternal,Shooter
+Dota 2,MOBA
+Dragon Quest XI,Role-Playing Game (RPG)
+Dying Light,Action
+Europa Universalis IV,Strategy
+Fall Guys,Party Games
+Fallout 4,Role-Playing Game (RPG)
+Far Cry 5,Shooter
+FIFA 21,Sports
+Final Fantasy VII Remake,Role-Playing Game (RPG)
+Fire Emblem: Three Houses,Role-Playing Game (RPG)
+Fortnite,Battle Royale
+Frostpunk,Survival
+Gears 5,Shooter
+Ghost of Tsushima,Adventure
+God of War,Action
+Grand Theft Auto V,Action
+Half-Life 2,Shooter
+Hades,Action
+Halo: The Master Chief Collection,Shooter
+Harvest Moon,Simulation
+Hearts of Iron IV,Strategy
+Hollow Knight,Platformer
+Horizon Zero Dawn,Role-Playing Game (RPG)
+Hyper Light Drifter,Action
+Iconoclasts,Platformer
+Into the Breach,Strategy
+Katana Zero,Platformer
+La-Mulana 2,Platformer
+Layers of Fear,Horror
+League of Legends,MOBA
+Left 4 Dead,Shooter
+Life is Strange,Adventure
+Mass Effect 2,Role-Playing Game (RPG)
+Mega Man 11,Platformer
+Metal Gear Solid V,Stealth
+Minecraft,Sandbox
+Mortal Kombat 11,Fighting
+Nier: Automata,Role-Playing Game (RPG)
+Nioh,Role-Playing Game (RPG)
+Overcooked 2,Simulation
+Overwatch,Shooter
+Persona 5,Role-Playing Game (RPG)
+Planet Coaster,Simulation
+Planet Zoo,Simulation
+Portal 2,Puzzle
+Prey,Shooter
+Project Zomboid,Survival
+PUBG,Battle Royale
+Rayman Legends,Platformer
+Red Dead Redemption 2,Action
+Resident Evil 2,Horror
+Rocket League,Sports
+Sekiro: Shadows Die Twice,Action
+Shovel Knight,Platformer
+Silent Hill 2,Horror
+SimCity,Simulation
+SOMA,Horror
+Sonic Mania,Platformer
+Spider-Man,Action
+Splatoon 2,Shooter
+Starcraft II,Strategy
+Stardew Valley,Simulation
+Street Fighter V,Fighting
+Super Mario Odyssey,Platformer
+Super Mario Party,Party Games
+Super Meat Boy,Platformer
+Super Smash Bros. Ultimate,Fighting
+Superliminal,Puzzle
+The Binding of Isaac,Roguelike
+The Division 2,Shooter
+The Elder Scrolls V: Skyrim,Role-Playing Game (RPG)
+The Evil Within,Horror
+The Last of Us Part II,Action
+The Legend of Zelda,Adventure
+The Messenger,Platformer
+The Outer Worlds,Role-Playing Game (RPG)
+The Room,Puzzle
+The Sims 4,Simulation
+The Talos Principle,Puzzle
+They Are Billions,Strategy
+This War of Mine,Survival
+Tomb Raider,Adventure
+Tony Hawk's Pro Skater 1 + 2,Sports
+Total War: Shogun 2,Strategy
+Undertale,Role-Playing Game (RPG)
+Valorant,Shooter
+Victoria II,Strategy
+Warcraft III,Strategy
+World of Warcraft,MMO (Massively Multiplayer Online)
+Xenoblade Chronicles 2,Role-Playing Game (RPG)

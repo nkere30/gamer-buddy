@@ -18,13 +18,14 @@ public class UserService {
     private UserRepository userRepository;
 
     @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Transactional
     public User registerUser(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
+
 
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
@@ -37,7 +38,7 @@ public class UserService {
             userOpt = userRepository.findByEmail(usernameOrEmail);
         }
 
-        if (userOpt.isPresent() && passwordEncoder.matches(rawPassword, userOpt.get().getPassword())) {
+        if (userOpt.isPresent() && bCryptPasswordEncoder.matches(rawPassword, userOpt.get().getPassword())) {
             return userOpt;
         } else {
             return Optional.empty();
