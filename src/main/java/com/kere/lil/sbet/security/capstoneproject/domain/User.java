@@ -24,4 +24,10 @@ public class User {
 
     @Column(nullable = false)
     private String fullName;
+
+    @Column
+    private String favoriteGame;
+
+    @Column
+    private String favoriteGameGenre;
 }

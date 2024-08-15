@@ -31,6 +31,19 @@
             <label for="password">Password</label>
             <input type="password" id="password" th:field="*{password}" placeholder="Input here..." required>
         </div>
+
+        <!-- New Favorite Game Field -->
+        <div class="input-group">
+            <label for="favoriteGame">Favorite Game</label>
+            <input type="text" id="favoriteGame" th:field="*{favoriteGame}" placeholder="Input here..." required>
+        </div>
+
+        <!-- New Favorite Game Genre Field -->
+        <div class="input-group">
+            <label for="favoriteGameGenre">Favorite Game Genre</label>
+            <input type="text" id="favoriteGameGenre" th:field="*{favoriteGameGenre}" placeholder="Input here..." required>
+        </div>
+
         <button type="submit" class="btn-reg btn">Confirm Registration</button>
     </form>
 </div>
