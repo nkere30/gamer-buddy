@@ -17,6 +17,7 @@ public class MatchService {
 
     @Autowired
     private MatchRepository matchRepository;
+    @Autowired
     private UserRepository userRepository;
 
     public Match handleMatch(User currentUser, User otherUser) {
