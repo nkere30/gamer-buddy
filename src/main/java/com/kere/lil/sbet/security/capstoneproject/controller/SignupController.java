@@ -1,30 +1,42 @@
 package com.kere.lil.sbet.security.capstoneproject.controller;
 
+import com.kere.lil.sbet.security.capstoneproject.domain.Game;
+import com.kere.lil.sbet.security.capstoneproject.domain.GameGenre;
 import com.kere.lil.sbet.security.capstoneproject.domain.User;
+import com.kere.lil.sbet.security.capstoneproject.service.GameGenreService;
+import com.kere.lil.sbet.security.capstoneproject.service.GameService;
 import com.kere.lil.sbet.security.capstoneproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class SignupController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private GameService gameService;
 
+    @Autowired
+    private GameGenreService gameGenreService;
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @GetMapping("/signup")
     public String signupForm(Model model) {
         model.addAttribute("user", new User());
+        // Use the services to fetch games and genres
+        List<Game> games = gameService.getAllGames();
+        List<GameGenre> gameGenres = gameGenreService.getAllGameGenres();
+        model.addAttribute("games", games);
+        model.addAttribute("gameGenres", gameGenres);
         return "signup";
     }
 
@@ -36,14 +48,7 @@ public class SignupController {
             return "signup";
         }
 
-        // Register the new user
         userService.registerUser(user);
-
-        // Automatically log the new user in after registration
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        return "redirect:/profile";
+        return "redirect:/profile?username=" + user.getUsername();
     }
 }
