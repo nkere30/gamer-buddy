@@ -33,9 +33,8 @@ public class ProfileController {
             model.addAttribute("user", userOpt.get());
             return "profile";
         } else {
-            // Return an error page or handle the case gracefully
-            model.addAttribute("error", "User not found.");
-            return "error";  // Assuming you have an error.html template
+            // If user is not found, return an error page or redirect to login
+            return "redirect:/login"; // Redirect to login if user not found
         }
     }
 }
