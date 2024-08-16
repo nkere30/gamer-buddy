@@ -23,7 +23,8 @@ public class MatchService {
 
 
     public Match handleMatch(User currentUser, User otherUser) {
-        Optional<Match> existingMatch = matchRepository.findByUser1IdAndUser2Id(currentUser.getId(), otherUser.getId());
+        // Use findFirstByUser1IdAndUser2Id to avoid NonUniqueResultException
+        Optional<Match> existingMatch = matchRepository.findFirstByUser1IdAndUser2Id(currentUser.getId(), otherUser.getId());
         Match match;
         if (existingMatch.isPresent()) {
             match = existingMatch.get();
@@ -33,6 +34,7 @@ public class MatchService {
         }
         return match;
     }
+
 
     public Optional<User> getRandomUserForMatching(User currentUser) {
         // Fetch all users with the same favorite game or genre except the current user
