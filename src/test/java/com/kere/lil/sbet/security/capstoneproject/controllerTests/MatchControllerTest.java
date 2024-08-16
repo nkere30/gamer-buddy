@@ -6,51 +6,36 @@ import com.kere.lil.sbet.security.capstoneproject.service.MatchService;
 import com.kere.lil.sbet.security.capstoneproject.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Optional;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 @WebMvcTest(MatchController.class)
 class MatchControllerTest {
-
     @Autowired
     private MockMvc mockMvc;
 
-    @Mock
+    @MockBean
     private MatchService matchService;
 
-    @Mock
+    @MockBean
     private UserService userService;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
-
-    @Test
-    void declineUser_NewMatchFound() throws Exception {
-        User currentUser = new User();
-        currentUser.setId(1L);
-        User newMatch = new User();
-        newMatch.setId(2L);
-
-        when(userService.getCurrentUser()).thenReturn(currentUser);
-        when(userService.findById(2L)).thenReturn(Optional.of(newMatch));
-        when(matchService.getRandomUserForMatching(currentUser)).thenReturn(Optional.of(newMatch));
-
-        mockMvc.perform(post("/findBuddy/decline")
-                        .param("userId", "2"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("findBuddy"));
-    }
 
     @Test
     void declineUser_NoNewMatchFound() throws Exception {

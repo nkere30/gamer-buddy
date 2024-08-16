@@ -42,8 +42,11 @@ public class SignupController {
 
     @PostMapping("/signup")
     public String registerUser(@ModelAttribute User user, Model model) {
+        // Get the error messages, ensure it's not null
         String errorMessages = userService.getRegistrationErrors(user);
-        if (!errorMessages.isEmpty()) {
+
+        // Check if errorMessages is not null and not empty
+        if (errorMessages != null && !errorMessages.isEmpty()) {
             model.addAttribute("error", errorMessages);
             return "signup";
         }
@@ -57,4 +60,5 @@ public class SignupController {
         // Redirect to the profile page of the newly logged-in user
         return "redirect:/profile";
     }
+
 }

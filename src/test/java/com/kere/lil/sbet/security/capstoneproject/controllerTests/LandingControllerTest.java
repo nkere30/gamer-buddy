@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -24,6 +25,7 @@ class LandingControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testuser")  // Simulate an authenticated user
     void home_ReturnsIndexView() throws Exception {
         mockMvc.perform(get("/index"))
                 .andExpect(status().isOk())
