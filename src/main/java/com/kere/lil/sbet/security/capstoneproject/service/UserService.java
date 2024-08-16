@@ -54,6 +54,7 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
     }
 
+
     public Optional<User> findById(Long id) {
         return userRepository.findById(id);
     }
@@ -91,4 +92,5 @@ public class UserService implements UserDetailsService {
                 new ArrayList<>()
         );
     }
+
 }
