@@ -30,4 +30,5 @@ public class ProfileController {
             return "redirect:/login"; // Redirect to login if user not found (shouldn't happen)
         }
     }
+//
 }
