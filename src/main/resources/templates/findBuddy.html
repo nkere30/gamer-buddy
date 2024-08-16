@@ -10,16 +10,28 @@
     <h1 class="logo">GamerBuddy</h1>
 
     <div class="card">
-        <h2 class="name">Sample Name</h2>
+        <!-- Display the matched user's name and bio -->
+        <h2 class="name" th:text="${matchedUser.fullName}">Sample Name</h2>
         <div class="bio">
-            <p>Interests: Shooter Games, blah blah blah</p>
+            <!-- Display Preferred Game and Preferred Game Genre -->
+            <p><strong>Preferred Game:</strong> <span th:text="${matchedUser.favoriteGame}">Shooter Games</span></p>
+            <p><strong>Preferred Game Genre:</strong> <span th:text="${matchedUser.favoriteGameGenre}">Action</span></p>
         </div>
     </div>
 
     <div class="actions">
-        <button class="btn decline-btn">Decline</button>
-        <button class="btn match-btn">Match</button>
+        <!-- Form for Decline action -->
+        <form th:action="@{/findBuddy/decline}" method="post" style="display: inline;">
+            <input type="hidden" name="userId" th:value="${matchedUser.id}" />
+            <button type="submit" class="btn decline-btn">Decline</button>
+        </form>
+        <!-- Form for Match action -->
+        <form th:action="@{/findBuddy/match}" method="post" style="display: inline;">
+            <input type="hidden" name="userId" th:value="${matchedUser.id}" />
+            <button type="submit" class="btn match-btn">Match</button>
+        </form>
     </div>
+
 </div>
 </body>
 </html>

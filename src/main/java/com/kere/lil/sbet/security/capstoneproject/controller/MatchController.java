@@ -46,13 +46,14 @@ public class MatchController {
 
         if (otherUserOpt.isPresent()) {
             matchService.handleMatch(currentUser, otherUserOpt.get());
+            return "redirect:/matchFound"; // Redirect to match found page
         }
 
         return "redirect:/findBuddy";
     }
 
     @PostMapping("/findBuddy/decline")
-    public String declineUser(@RequestParam Long userId) {
+    public String declineUser(@RequestParam Long userId, Model model) {
         User currentUser = userService.getCurrentUser();
         Optional<User> otherUserOpt = userService.findById(userId);
 
@@ -60,6 +61,21 @@ public class MatchController {
             matchService.handleDecline(currentUser, otherUserOpt.get());
         }
 
-        return "redirect:/findBuddy";
+        // Find another match after decline
+        Optional<User> newMatchOpt = matchService.getRandomUserForMatching(currentUser);
+
+        if (newMatchOpt.isPresent()) {
+            model.addAttribute("matchedUser", newMatchOpt.get());
+            return "findBuddy";  // Render the findBuddy page with a new match
+        } else {
+            model.addAttribute("message", "No available users for matching.");
+            return "noMatches";  // Render the noMatches page if no more matches are found
+        }
     }
+
+    @GetMapping("/matchFound")
+    public String matchFoundPage() {
+        return "matchFound";
+    }
+
 }

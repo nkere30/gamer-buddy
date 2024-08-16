@@ -20,6 +20,8 @@ public class MatchService {
     @Autowired
     private UserRepository userRepository;
 
+
+
     public Match handleMatch(User currentUser, User otherUser) {
         Optional<Match> existingMatch = matchRepository.findByUser1IdAndUser2Id(currentUser.getId(), otherUser.getId());
         Match match;
@@ -32,25 +34,30 @@ public class MatchService {
         return match;
     }
 
-    public void handleDecline(User currentUser, User otherUser) {
-        // If needed, implement decline logic or leave it empty
-        Match match = new Match(currentUser.getId(), otherUser.getId());
-        matchRepository.save(match);
-    }
     public Optional<User> getRandomUserForMatching(User currentUser) {
-        // Fetch all users except the current user
-        List<User> allUsers = userRepository.findAll().stream()
+        // Fetch all users with the same favorite game or genre except the current user
+        List<User> potentialMatches = userRepository.findAll().stream()
                 .filter(user -> !user.getId().equals(currentUser.getId()))
+                .filter(user -> user.getFavoriteGame().equals(currentUser.getFavoriteGame()) ||
+                        user.getFavoriteGameGenre().equals(currentUser.getFavoriteGameGenre()))
                 .collect(Collectors.toList());
 
-        if (allUsers.isEmpty()) {
+        if (potentialMatches.isEmpty()) {
             return Optional.empty();
         }
 
         // Randomly select a user from the list
         Random random = new Random();
-        User randomUser = allUsers.get(random.nextInt(allUsers.size()));
+        User randomUser = potentialMatches.get(random.nextInt(potentialMatches.size()));
 
         return Optional.of(randomUser);
     }
+
+    public void handleDecline(User currentUser, User otherUser) {
+        // If needed, implement decline logic or leave it empty
+        Match match = new Match(currentUser.getId(), otherUser.getId());
+        matchRepository.save(match);
+    }
+
+
 }
