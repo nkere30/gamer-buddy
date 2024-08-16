@@ -1,4 +1,4 @@
-package com.kere.lil.sbet.security.capstoneproject;
+package com.kere.lil.sbet.security.capstoneproject.controllerTests;
 
 import com.kere.lil.sbet.security.capstoneproject.controller.LoginController;
 import com.kere.lil.sbet.security.capstoneproject.domain.User;

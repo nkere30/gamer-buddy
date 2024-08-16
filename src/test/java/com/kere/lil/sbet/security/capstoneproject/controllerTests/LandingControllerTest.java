@@ -1,11 +1,8 @@
-package com.kere.lil.sbet.security.capstoneproject;
+package com.kere.lil.sbet.security.capstoneproject.controllerTests;
 
-import com.kere.lil.sbet.security.capstoneproject.controller.MatchController;
-import com.kere.lil.sbet.security.capstoneproject.service.MatchService;
-import com.kere.lil.sbet.security.capstoneproject.service.UserService;
+import com.kere.lil.sbet.security.capstoneproject.controller.LandingController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -15,17 +12,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-@WebMvcTest(MatchController.class)
-class MatchControllerTest {
+@WebMvcTest(LandingController.class)
+class LandingControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Mock
-    private MatchService matchService;
-
-    @Mock
-    private UserService userService;
 
     @BeforeEach
     void setUp() {
@@ -33,9 +24,9 @@ class MatchControllerTest {
     }
 
     @Test
-    void findBuddyPage_AuthenticatedUser() throws Exception {
-        mockMvc.perform(get("/findBuddy"))
+    void home_ReturnsIndexView() throws Exception {
+        mockMvc.perform(get("/index"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("findBuddy"));
+                .andExpect(view().name("index"));
     }
 }
