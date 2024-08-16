@@ -17,13 +17,16 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http, UserService userService) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/login", "/", "/signup", "/profile", "/findBuddy", "/styles.css")
+                .antMatchers("/login", "/signup", "/index", "/styles.css").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")  // Specify the custom login page URL
+                .defaultSuccessUrl("/profile", true)  // Redirect to profile page after successful login
                 .permitAll()
-                .anyRequest()
-                .authenticated()
                 .and()
                 .logout()
                 .logoutUrl("/logout")
@@ -34,5 +37,3 @@ public class SecurityConfig {
         return http.build();
     }
 }
-
-
