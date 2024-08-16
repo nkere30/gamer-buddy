@@ -9,12 +9,15 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Optional;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(ProfileController.class)
@@ -23,13 +26,8 @@ class ProfileControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Mock
+    @MockBean
     private UserService userService;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     void profile_ValidUser_DisplaysProfile() throws Exception {
@@ -39,7 +37,8 @@ class ProfileControllerTest {
         when(userService.findByUsername("testuser")).thenReturn(Optional.of(user));
 
         mockMvc.perform(get("/profile")
-                        .param("username", "testuser"))
+                        .param("username", "testuser")
+                        .with(user("testuser").roles("USER")))  // Mock authenticated user
                 .andExpect(status().isOk())
                 .andExpect(view().name("profile"))
                 .andExpect(model().attributeExists("user"));
@@ -50,7 +49,8 @@ class ProfileControllerTest {
         when(userService.findByUsername("invaliduser")).thenReturn(Optional.empty());
 
         mockMvc.perform(get("/profile")
-                        .param("username", "invaliduser"))
+                        .param("username", "invaliduser")
+                        .with(user("invaliduser").roles("USER")))  // Mock authenticated user
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/login"));
     }

@@ -32,7 +32,6 @@ public class UserService implements UserDetailsService {
         return userRepository.save(user);
     }
 
-
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
@@ -56,7 +55,6 @@ public class UserService implements UserDetailsService {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
     }
-
 
     public Optional<User> findById(Long id) {
         return userRepository.findById(id);

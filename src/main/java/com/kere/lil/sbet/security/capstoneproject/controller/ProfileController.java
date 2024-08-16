@@ -20,6 +20,12 @@ public class ProfileController {
     @GetMapping("/profile")
     public String profile(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        // Check if the user is authenticated
+        if (auth == null || !auth.isAuthenticated() || "anonymousUser".equals(auth.getName())) {
+            return "redirect:/login";
+        }
+
         String username = auth.getName(); // Get the username of the currently authenticated user
 
         Optional<User> userOpt = userService.findByUsername(username);
@@ -27,8 +33,9 @@ public class ProfileController {
             model.addAttribute("user", userOpt.get());
             return "profile";
         } else {
-            return "redirect:/login"; // Redirect to login if user not found (shouldn't happen)
+            // Return an error page or handle the case gracefully
+            model.addAttribute("error", "User not found.");
+            return "error";  // Assuming you have an error.html template
         }
     }
-//
 }
