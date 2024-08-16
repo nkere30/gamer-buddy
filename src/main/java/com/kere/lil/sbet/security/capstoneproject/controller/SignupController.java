@@ -48,7 +48,13 @@ public class SignupController {
             return "signup";
         }
 
+        // Register the user
         userService.registerUser(user);
-        return "redirect:/profile?username=" + user.getUsername();
+
+        // Authenticate and log in the newly registered user
+        userService.authenticateAndLoginUser(user, authenticationManager);
+
+        // Redirect to the profile page of the newly logged-in user
+        return "redirect:/profile";
     }
 }
