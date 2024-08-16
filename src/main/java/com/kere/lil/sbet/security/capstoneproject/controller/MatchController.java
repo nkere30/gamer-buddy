@@ -32,14 +32,12 @@ public class MatchController {
 
         if (randomUserOpt.isPresent()) {
             model.addAttribute("matchedUser", randomUserOpt.get());
-            return "findBuddy";  // Ensure this matches the actual HTML template name
+            return "findBuddy";
         } else {
             model.addAttribute("message", "No available users for matching.");
-            return "noMatches";  // Handle case where no match is found
+            return "noMatches";  // Referencing the noMatches template
         }
     }
-
-
 
     @PostMapping("/findBuddy/match")
     public String matchUser(@RequestParam Long userId) {

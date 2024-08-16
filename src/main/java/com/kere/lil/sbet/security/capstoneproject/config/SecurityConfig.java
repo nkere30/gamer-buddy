@@ -26,12 +26,12 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/login", "/signup", "/index", "/styles.css").permitAll()
+                .antMatchers("/", "/index", "/login", "/signup", "/styles.css").permitAll()  // Permit root URL
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")  // Specify the custom login page URL
-                .defaultSuccessUrl("/profile", true)  // Redirect to profile page after successful login
+                .loginPage("/login")
+                .defaultSuccessUrl("/profile", true)
                 .permitAll()
                 .and()
                 .logout()
