@@ -80,22 +80,26 @@ class UserServiceTest {
         User user = new User();
         user.setUsername("testuser");
 
-        when(userService.isUsernameTaken("testuser")).thenReturn(true);
+        // Mocking the UserRepository to return a non-empty Optional when finding by username
+        when(userRepository.findByUsername("testuser")).thenReturn(Optional.of(user));
 
         String errors = userService.getRegistrationErrors(user);
 
         assertEquals("Username already taken", errors);
     }
 
+
     @Test
     void getRegistrationErrors_EmailTaken() {
         User user = new User();
         user.setEmail("test@example.com");
 
-        when(userService.isEmailTaken("test@example.com")).thenReturn(true);
+        // Mocking the UserRepository to return a non-empty Optional when finding by email
+        when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.of(user));
 
         String errors = userService.getRegistrationErrors(user);
 
         assertEquals("Email already taken", errors);
     }
+
 }
